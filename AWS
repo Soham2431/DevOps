@@ -1,0 +1,107 @@
+#AWS 
+
+=========
+IMP Services
+==========
+ EC2, S3, Lambda, VPC, IAM, CloudFormation, CloudWatch, Load Balancers, Route53, etc.
+ EC2, S3, RDS, IAM, Lambda, VPC, EBS, ELB, Elastic IPs, Security Group
+ EC2, ELB, VPC, Lambda, RDS, S3, Auto Scaling, 
+ 
+============
+VPC Endpoint
+============
+VPC Endpoint is a service in AWS that allows your VPC to privately connect to other AWS services, such as S3 or DynamoDB, without exposing the traffic to the internet. 
+This means you don't need a NAT Gateway, Internet Gateway, or any public IPs for accessing these services. Instead, it uses AWS PrivateLink, enabling secure 
+and private communication entirely within the AWS network.
+
+Q. My EC2 instance is in a private subnet, and I want to access an S3 bucket. How can I do that?
+Since my EC2 instance is in a private subnet, I will create an S3 VPC Gateway Endpoint to securely access the S3 bucket without requiring internet access or a NAT 
+Gateway. This establishes a private connection using AWS's internal network. After setting up the endpoint and updating the route table, I can test access using the AWS CLI.
+
+===================
+VPC Transit Gateway
+===================
+VPC Transit Gateway is an AWS service that acts as a centralized hub, allowing you to connect multiple VPCs and on-premises networks. It provides a single endpoint to 
+manage communication between these networks, enabling seamless and scalable interconnectivity without the need for complex peering configurations.
+
+=========
+Route-53
+=========
+
+What is Cname ?
+In Amazon Route 53, a CNAME (Canonical Name) record is a type of DNS record that maps an alias domain name to another domain name (canonical domain). It is commonly used for pointing subdomains 
+to another domain name rather than an IP address.
+
+what is hosted zone?
+
+
+### 1. **Simple Routing**
+   - **Correct Explanation**:
+     - Simple routing uses a single IP address or resource to route all traffic. When you configure this policy, all requests are routed to a single resource (e.g., EC2 instance or load balancer).
+     - **Example**: You configure Route 53 to direct all traffic for `example.com` to a single EC2 instance or load balancer IP address.
+
+---
+
+### 2. **Failover Routing**
+   - **Correct Explanation**:
+     - Failover routing is designed for **high availability**. 
+     - Traffic is routed to the **primary resource** (e.g., a healthy instance or load balancer). If the primary resource fails a health check, traffic is automatically redirected to a **secondary (failover) resource**.
+     - **Example**: If your primary EC2 instance becomes unhealthy, traffic is routed to a backup instance in another region or availability zone.
+
+---
+
+### 3. **Latency-based Routing**
+   - **Correct Explanation**:
+     - Latency-based routing routes traffic to the resource (e.g., an EC2 instance or load balancer) with the **lowest latency** from the user’s location.
+     - This is particularly useful for improving application performance in a globally distributed user base.
+     - **Note**: Latency routing does not mark instances as unhealthy if they have high latency—it simply routes users to the resource with the best performance.
+     - **Example**: A user in Asia might be routed to an EC2 instance in the Asia region, while a user in Europe would be routed to a resource in the Europe region.
+
+---
+
+### 4. **Weighted Routing**
+   - **Correct Explanation**:
+     - Weighted routing distributes traffic based on **assigned weights** to multiple resources.
+     - You can allocate specific percentages of traffic to different resources, which is useful for **canary deployments** (gradual migration from one version to another) or **A/B testing**.
+     - **Example**: Assign 70% of traffic to the older version of your application and 30% to the new version.
+
+---
+
+### 6. **Geolocation Routing**
+   - **Correct Explanation**:
+     - Geolocation routing allows you to route traffic based on the **geographic location** of the user making the DNS request.
+     - You can specify traffic routing for users in a specific country, continent, or region.
+     - **Example**: Route all traffic from users in India to an application in the `ap-south-1` region and traffic from Europe to the `eu-west-1` region.
+
+
+=============
+Target Groups
+=============
+target groups means its a logical grouping of EC2 instances which is used by load balancers to route the traffic. 
+
+Q. I have created Target Groups, and one of my instances has failed in the Target Group. How do I fix this issue in real-time?
+Ans: If an EC2 instance fails in the Target Group, I first check the AWS Console to identify the issue. Then, I manually verify if the instance and application are running 
+using SSH and curl. Next, I check security group rules and network ACLs to ensure traffic is allowed. If the application service is down, I restart it and verify its status. 
+If the problem persists, I deregister/re-register the instance or replace it if needed. Additionally, I use CloudWatch Logs and ALB Metrics to monitor and prevent future issues.
+
+=============
+Instances and cost optimization 
+=============
+✅ Use On-Demand → When you need flexibility & short-term usage. (if it consume the compute resource 80-90% then aws terminate it ) linux per second and windows per hour 0.386 
+                                                                                                                                     means 3k $ per year
+✅ Use Spot Instances → When cost is a priority & workload can handle interruptions. (aws can terminate it any time)
+✅ Use Reserved Instances → When running workloads for 1-3 years to save costs. ( 70% off duration 1-3 years )
+✅ Use Savings Plan → When you want flexibility across instance types & regions.
+
+=============
+IAM
+=============
+aws console go to qa accound - Iam -role create role - select aws account paste ac id- attatch permion
+aws console go to staging accound - Iam -role create role - select aws account paste ac id- attatch permion
+create user admin 1 and admin2 in main account 
+add it in group admin group - attatch inline policy directly to group i.e assume role copy the arm of qa and staging role 
+but still we r not getting access when we login to that particular user i.e admin1 and admin2 
+now go to that user that is admin1 user and switch role by clicking account of admin1 and add the account id of staging where role is exist this is first way 
+now second way go to main account - IAM - user groups - go to permissiom - attatch policies accourding to u r requirement  
+
+
