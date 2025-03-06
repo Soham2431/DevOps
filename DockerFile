@@ -1,0 +1,10 @@
+FROM maven:3.8.5-openjdk-11-jre-slim as build
+WORKDIR /app
+COPY ..
+RUN mvn clean package
+
+FROM openjdk:11-jre-slim as runtime
+WORKDIR /app
+COPY --from=build/target/app/*.jar app.jar
+EXPOSE 8080
+CMD["java","-jar","app.jar"]
