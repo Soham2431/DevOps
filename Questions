@@ -1,3 +1,110 @@
+==============
+inferyx
+==============
+1. Write a Jenkins declarative pipeline to build a Maven project, run tests, and deploy if the tests pass.
+2. Write a Bash script to check CPU utilization on a Linux server and send an email if it exceeds 80%.
+3. Write a Terraform configuration to provision an EC2 instance in a specific VPC and subnet, and attach a security group that allows SSH access.
+4. Write an Ansible playbook to:
+Install Nginx on Ubuntu.
+Start and enable the Nginx service.
+Copy a custom index.html file to /var/www/html.
+5. Create a Dockerfile for a Spring Boot app that:
+Uses OpenJDK 17.
+Copies the target/*.jar into the image.
+Exposes port 8080.
+Uses ENTRYPOINT to run the app.
+6. Write a Python script that:
+Lists all EC2 instances in a given region.
+Filters instances by running state.
+Prints instance ID, type, and public IP.
+7. Write a simple CloudFormation template to:
+Create a VPC with one public subnet.
+Launch an EC2 instance in the subnet.
+Add outputs for the subnet ID and instance ID.
+
+==============
+Amdocs
+==============   
+Intro , roles and resposibilities what r doing for your org u r contribution ?
+Ok now what the isuue solved recently in ur org how you fixed whats the conclusion u got ?
+architecture of k8s ?
+what is orchestation ?
+what r the things u have worked on terraform?
+what is count function in terraform?
+any other way to do it like in looping ?
+write trafform code for ec2 and provider as well?
+lets take there 20 resources created and i want destroy only one resource how can do it ?
+what is saas paas IAAS ?
+could u explain the entire flow of your ci cd pipleine ?
+where dev write the code how he will commit it then how pipline trigger like i want to know which branch he will commit the how he will commt te and jenkins pipeline runs ?
+
+==============
+TSYS
+==============
+*** Round 1 ***
+How prometheus sending those logs to kibana ?
+is prometheus sending those logs to grafana of grafana taking it? 
+lets take u r creating dashbord in grfana how graphana knows that is metric in promethus how he knows that he has take logs from that. 
+lets take only cpu or memory realted data how kibana knows that he has take data from that.
+Let's say. I nave deployed API in Kubernetes. And it is running database. Okay. so, What are all the components that are needed? F actively. Serve the request that is coming from outside lines
+The API is running. The API is running in a Kubernetes cluster in a place.
+Okay, so I am a client. I'm coming to you. I need To access that APA. Okay. So, you need to configure. Multiple things. For that. So that I will be able to access it because they is currently running in the AWS. That is a private. Your private VPC. I am a public user, I need to access it. So what are all the
+So what are all the components that are needed that you need to configure? So that I will be A able to access your API.
+A load balancer. You have created in that is AWS component. In Kubernetes You have created the increase of created the service
+okay, so now you have created a service load balancer service When you create a Load Balancer service. So what will be created in the AWS side? There will be a lot.
+Okay. Now let's say you have created a, what kind of Like in Route, 53 water. All the things, you will provide for that.
+Okay. So, in DNS. so, In a Linux machine. Let's say you have a instance created. And you need that instance to use a particular DNS. So, how you will configure that?
+yeah, there is a DNS server, let's say, you have you are hosting a DNS and you have a different DNS server and you have you need your PC to instance, to use your DNS server. How you will be able to achieve that? 
+Okay, you have DNS server. You have created a DNS server. Okay, and you have created a easy to instance. That is a Linux instance: 80 you want your Linux instance to use the DNS server that you have created? For the name resolution. So, how you will achieve that?
+Okay. Let's say you need to find a particular file. In a directory. How do you do that? What is the command?
+So, how you will be able to filter out a single line? Using our command
+If you put dollar one, Will it print? First. Line, or first column.
+which is commnd to give as a single line out put from file
+there are two files which contains 150 lines in one file and other file contain 200 lines how will find out that 50 different lines which not in file 1
+What is xarg command do?
+
+*** Round 2 ***
+Kubectl and kubeproxy is created by yaml files or not how its created then?
+Diff demonset and deployement ?
+You means deployment can be created by ns but not demonset ?
+Python code a = [12, 666, 78, 90, 1, 5, 197] fetch only two degit num from this with the help of array ?
+Types of load balacers ?
+Diff ALB and NLB when to use ALB when to NLB ?
+You are DB application is in private sub how will you expose it to internet so he can talk with internet but request can not be comes from interet to db ? 
+
+===========
+Deepintent
+===========
+Day to Day activities & roles and resposibilities ?
+Which k8s cluster version you folks are using and what is the size of worker nodes u folks are using ?
+If i want to deploy a new microservice on kubernetes cluster how can do that ?
+Lets take there are existing applications and user wants to access that application but its getting 503 error how you will solve this error ?
+What is 503 error ?
+
+===========
+RapiPay
+===========
+*** 1st Round ***
+K8s rbac deployement statefulset pv pvc 
+Docker best practices `
+AWS three tier architecture 
+Jenkins
+Terraform
+
+*** 2nd Round ***
+How will you deploy microservices via jenkins ci cd
+write jenkins file
+how you will rollback in jenkins
+Let's take there are three services that is loadbalacer -> 1.txt 2.ums 3.report now i have created same loadbalacer -> 1.txt 2.ums 3. report 1.txt 2.ums 3.report second one 
+is new version i want to create a pipeline for that new version could you tell me how you will write jenkinsfile for this 
+securely configuration related to ec2 or s3
+s3 types 
+s3 lifecycle 
+sql query
+RDS
+lamda 
+how you will create user in RDS 
+
 ===========
 Trigyn
 ===========
