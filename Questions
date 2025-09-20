@@ -1,10 +1,10 @@
 ==========
 HCL Tech
 ==========
+
 Intro 
 what are the tools u r using 
 could you explain your project
-
 git fetch vs git pull
 git rebase
 branching strategy
@@ -18,6 +18,7 @@ what is local exec and remote exec in terraform
 what is file provisioner in terraform
 what are the commands do you know in terraform
 if i want run specific commands during creation of ec2 how can do that with or without terraform
+if i by mistake deleted statefile not stored in remote backend no backups how can i get it back 
 
 what pod distribution budget
 there are two pods one is running in one ns1 and other in ns2 how you can make communication betn these two pods how you can check the commmunication betn them
@@ -26,9 +27,9 @@ eks version u r using
 what is the diffn betn replicaset and replication controller
 s3 cores means
 when we create LB what are the other componenets requred
-what are the types of plicies in dns 
-how to transe ebs from ine zone to another 
-what is gateway load balancer 
+what are the types of policies in dns 
+how to transfer ebs from one zone to another 
+what is gateway load balancer
 
 
 ==========
