@@ -1,0 +1,71 @@
+Here’s a ready-to-use set of one-liner commands to generate all the common Kubernetes YAML manifests. Each one will create a .yaml file that you can later edit and apply.
+
+
+---
+
+🔹 1. Deployment
+
+kubectl create deployment test --image=alpine --env="MY_ENV_VAR=hello" --env="APP_MODE=dev" --dry-run=client -o yaml > deployment.yaml
+
+
+---
+
+🔹 2. Service
+
+kubectl expose deployment test --port=80 --target-port=80 --name=test-service --type=ClusterIP --dry-run=client -o yaml > service.yaml
+
+👉 Change --type=ClusterIP to NodePort or LoadBalancer if required.
+
+
+---
+
+🔹 3. Ingress
+
+kubectl create ingress test-ingress --rule="myapp.example.com/*=test-service:80" --dry-run=client -o yaml > ingress.yaml
+
+👉 Edit later for TLS or annotations (like for NGINX ingress).
+
+
+---
+
+🔹 4. PersistentVolume (PV)
+
+kubectl create pv test-pv --capacity=1Gi --access-modes=ReadWriteOnce --storage-class=manual --dry-run=client -o yaml > pv.yaml
+
+
+---
+
+🔹 5. PersistentVolumeClaim (PVC)
+
+kubectl create pvc test-pvc --storage=1Gi --access-modes=ReadWriteOnce --storage-class=manual --dry-run=client -o yaml > pvc.yaml
+
+
+---
+
+🔹 6. ConfigMap
+
+kubectl create configmap test-config --from-literal=APP_MODE=dev --from-literal=DEBUG=true --dry-run=client -o yaml > configmap.yaml
+
+
+---
+
+🔹 7. Secret
+
+kubectl create secret generic test-secret --from-literal=DB_USER=admin --from-literal=DB_PASS=pass123 --dry-run=client -o yaml > secret.yaml
+
+
+---
+
+✅ After running these, you’ll have files like deployment.yaml, service.yaml, ingress.yaml, etc.
+Then just apply them:
+
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+kubectl apply -f ingress.yaml
+kubectl apply -f pv.yaml
+kubectl apply -f pvc.yaml
+kubectl apply -f configmap.yaml
+kubectl apply -f secret.yaml
+
+
+---
