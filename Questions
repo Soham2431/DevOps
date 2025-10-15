@@ -34,9 +34,8 @@ there is an nginx deplopment initially i use replicaset as 5 now i make it 15 bu
 how will you troubleshoot it ?
 which monitoring tools are using ? what is efk ?
 we have ec2 s3 rds which modules you are using what will be structure of that modules just give me overview?
-what is git stash git status git ques?
+what is git stash git status git squash?
 what tearrform plan? terraform validate?
-
 
 ==========
 HCL Tech
