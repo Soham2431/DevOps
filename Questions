@@ -1,4 +1,26 @@
 ==========
+Valere Labs
+==========
+
+Intro
+there is an java app i want deploy it on ec2 without docker and kubertes how will you setup jenkins ci cd for that?
+now i want to deploy it via docker without k8s how will you setup jenkins ci cd for that?
+now i want to deploy 20 microservices with helps of docker how will you setup jenkins ci cd for that? how will you make communication between them?
+now i want to deploy 20 microservices with help of k8s how will you setup jenkins ci cd for that? 
+now i want to deploy 20 microservices with help of eks how will you setup jenkins ci cd for that?
+as you mentioned earlier like you are writing separte pipeline for each microservice tommorow i hvae to write 10000 microservices shall i need to write seperate ci cd for the same 
+or any option to avoid this?
+where do you store config files in k8s ? --> i said k8s cluster configmap and secret in secret manager tool
+what is blue green and canary deployment?
+there is an nginx deplopment initially i use replicaset as 5 now i make it 15 but after apply it it running only 5 which existing one other one are not getting started 
+how will you troubleshoot it ?
+which monitoring tools are using ? what is efk ?
+we have ec2 s3 rds which modules you are using what will be structure of that modules just give me overview?
+what is git stash git status git ques?
+what tearrform plan? terraform validate?
+
+
+==========
 HCL Tech
 ==========
 
