@@ -1,0 +1,52 @@
+1. Basic Commands & File Management
+
+ls -ltr → listing files with details.
+cd /path/to/dir → change directory.
+pwd → print working directory.
+cp, mv, rm, mkdir, rmdir → copy, move, delete files/directories.
+find / -type f -size +10M → find files larger than 10MB.
+How to find files modified in the last 24 hours? (find /path -mtime -1)
+How to filter a single line from a file? (head -1, awk '{print $1}', etc.)
+grep vs egrep → searching patterns.
+
+2. Process & System Monitoring
+
+ps aux vs ps -ef → difference and usage.
+How to identify the process consuming most CPU/memory? (top, ps --sort=-%cpu)
+top, htop → monitor CPU/memory.
+free -m → check memory usage.
+df -h → disk usage.
+du -sh * → folder sizes.
+uptime → system load and interpreting load average.
+How do you find which process uses a specific port? (ss -tlnp | grep :<port>)
+vmstat 1 5 → system performance stats.
+How to kill a process? (kill PID, kill -9 PID)
+CrashLoopBackOff troubleshooting → check logs, resources, process status.
+
+3. Networking
+
+How to check which ports are open/listening? (ss -tlnp, netstat -tuln)
+How to check connectivity? (ping, curl -I)
+Difference between NACL and Security Groups (conceptual networking in Linux/AWS context).
+Linux Package Management
+Installing package using sudo apt-get install → if package not found (apt-get update, apt-cache search <package>).
+File Permissions & Ownership
+chmod 755 file.sh → change permissions.
+chown user:group filename → change owner.
+Difference between hard link and soft link (ln vs ln -s).
+
+4. Shell / Scripting
+
+Write a Bash script to check CPU utilization and send email if > 80%.
+xargs command → usage in pipelines.
+How to schedule a job every 5 minutes using cron (crontab -e, */5 * * * *).
+Text Processing & Git-related Linux Commands
+git status, git stash, git squash, git fetch vs git pull (basic command-level Linux usage for DevOps context).
+How to find difference between two files with many lines (diff / comm / cmp).
+
+5. Logs & Troubleshooting
+
+How to check logs of a process.
+If system or service is down (e.g., ELK cluster), how to debug using Linux commands.
+Check file existence, size, permissions (ls -lh, stat, file, head/tail).
+
