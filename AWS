@@ -4,7 +4,7 @@
 IMP Services
 ==========
  EC2, S3, Lambda, VPC, IAM, CloudFormation, CloudWatch, Load Balancers, Route53, etc.
- EC2, S3, RDS, IAM, Lambda, VPC, EBS, ELB, Elastic IPs, Security Group
+ EC2, S3, RDS, IAM, Lambda, VPC, EBS, ELB, Security Group
  EC2, ELB, VPC, Lambda, RDS, S3, Auto Scaling, 
  
 ============
