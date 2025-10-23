@@ -38,7 +38,7 @@ UUID=ccef6824-56ee-4f80-b047-0a4b5547deb0
 ==============
 docker volume create mongo
 docker run --rm -d --name app1 -v mongo/data/db mongo:latest
-To enable the conainer to do docker ps when we are inside conatiner ( DOCKER SOCK IS NOT THERE BECAUSE ITS IN ETWEEN DOCKER CLIENT AND DOCKER HOST WHICH ACTUALLY HELP US TO 
+To enable the container to do docker ps when we are inside container ( DOCKER SOCK IS NOT THERE BECAUSE ITS IN BETWEEN DOCKER CLIENT AND DOCKER HOST WHICH ACTUALLY HELP US TO 
 RUN THE COMMANDS LIKE IN THIS WAY DOCKER KNOWN TO EXECUTE DOCKER PS ON DOCKER ) 
 docker run --rm -d --name app1 -v /var/run/docker.sock:/var/run/docker.sock --network none kiran2361993/troubleshootingtools:v1-d --name app1 -v 
 ==============
