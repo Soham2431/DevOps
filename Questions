@@ -17,6 +17,29 @@ node affinity antiaffinity diff
 how to rollback in jenkins if deployment is failed?
 we are in teams meeting so which protocol we are using right now ?
 k8s load balancer vs ingress vs appliction load balancer?
+
+=====
+L2
+=====
+Intro?
+what is egress and ingress ?
+there is an ec2 i want tocreate what areiput parametrs will you consider while creating ec2 by using terraform?
+will you create new SG of use existing one ?
+what is authorization in IAM ?
+there are two accouns ac1 and ac2 how you wil connect with each other to access the resources? I said IAM role with assume the role in account1
+You have an EBS volume of type gp3 attached to your EC2 instance, and now you want to change it to io1.
+How will you do that?
+Will it create a new volume, or will your data remain as it is?
+what is subnets?
+there is an ingress which is not routing correctly how will troubleshoot it in ingress?
+what are the svc types in k8s?
+what are the best security practices in k8s?
+what is init conatiner?
+what r the components in node ?
+how you can create node group while creating eks?
+what is KMS?
+why we use KMS what is the use of KMS?
+
 ===========
 Intellect Design Arena
 ===========
