@@ -1,3 +1,35 @@
+
+
+=========
+Infinite
+=========
+Linux
+
+what are the file system herachy
+how you will sudo permission to normal user
+what is umask
+what is inode?
+how you will add port 22 in linux?
+how you will u connect to linux server from one to another if ssh port is enabled still you are unable to connect to that server?
+how you deploy jar and war tomcat on linux server if you r using tomcat for web app?
+how youdo disk partition on linux?
+what are disk partition are there in linux?
+copy file and dir from src to dest?
+check mem and ceck cpu and disk?
+how find the space of entire linux server?
+how will you do passwardless authentication betn two servers?
+
+Kubernetes
+
+k8s architecture
+if nodes are consuming lot of space how will check it ?
+if a node is down in k8s how will you check it and troble shoot it ?
+what is container runtime?
+how to check the containers are running or not in k8s?
+services in k8s?
+what is the use of nodeport svc?
+if there is a pod i want to expose it to externally outside cluster to another service how can i do that?
+
 ===========
 INFINITE
 ===========
