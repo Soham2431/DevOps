@@ -1,4 +1,68 @@
 ==========
+Securly 
+==========
+FROM mavne:3.8.5-openjdk-11-slim AS build
+WORKDIR /app
+COPY . .
+RUN mvn clean package
+
+FROM openjdk:11-jre AS runtime
+WORKDIR /app    
+COPY --from=build /app/target/*.jar app.jar
+EXPOSE 8080
+CMD ["java","-jar","app.jar"]
+
+what is AS there 
+in terraform there is an ec2 where templete is written for qa without duplication how can i do that in different env dev prod 
+
+set -e
+[[ .. ]] and  [ .. ]
+
+abc.text
+/home/soham
+
+
+def add_item(item, target=[]):
+     target.append(item)
+     return target
+
+print(add_item(1))
+print(add_item(2))
+print(add_item(3))
+
+what is the output of this
+[1]
+[1,2]
+[1,2,3]
+
+
+Filename : /var/log/names.log
+
+Content of file: 
+
+My Name is Diksha
+My Name is Rahul
+My Name is Diksha
+My Name is Alok
+My Name is Diksha
+My Name is Akshay
+My Name is Deepak
+My Name is Amandeep
+My Name is Amey
+My Name is Diksha
+1. print lines containing "Diksha" name in it --> grep "Diksha" /var/log/names.log
+2. Print how many times Diksha is present in file --> grep "Diksha" /var/log/names.log | wc -l
+
+3. Print only "Diksha" no. of times it is present in file --> grep -o "Diksha" /var/log/names.log
+
+
+.dockerignore
+Control Group
+Cgroups
+
+is there is a monunt path /home/soham i want use it in different containers shall i do that in docker?
+
+==========
 Vodaphone 
 ==========
 
